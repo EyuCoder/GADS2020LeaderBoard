@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">GADS2020LeaderBoard</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="leaderboard">LEADERBOARD</string>
+    <string name="skill_iq_leaders">Skill IQ Leaders</string>
+    <string name="learning_leaders">Learning Leaders</string>
+    <string name="learning_badge">Learning Badge</string>
+    <string name="learning_leader_details">%1$d learning hours, %2$s.</string>
+    <string name="skill_leader_details">%1$d skill IQ Score, %2$s.</string>
+    <string name="no_data">No Data</string>
+    <string name="network_error">Please make sure you\'re connected to the internet and try again.</string>
+    <string name="submit">Submit</string>
+    <string name="project_submission">Project Submission</string>
+    <string name="close_btn">Close Button</string>
+    <string name="yes">Yes</string>
+    <string name="are_you_sure">Are you sure?</string>
+    <string name="back">Back</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="logo">Logo</string>
+    <string name="project_on_github_link">Project on GITHUB (link)</string>
+    <string name="email_address">Email Address</string>
+    <string name="fill_fields">Please fill all fields before proceeding.</string>
+    <string name="submitting">Submitting...</string>
+    <string name="submission_successful">Submission Successful</string>
+    <string name="submission_not_successful">Submission not Successful</string>
+</resources>

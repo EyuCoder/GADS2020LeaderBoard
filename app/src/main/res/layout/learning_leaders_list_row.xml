@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginBottom="10dp"
+    android:background="@android:color/white"
+    android:columnCount="2"
+    android:elevation="4dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:rowCount="2">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="86dp"
+        android:layout_height="86dp"
+        android:layout_rowSpan="2"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:contentDescription="@string/learning_badge"
+        app:srcCompat="@drawable/top_learner" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_rowWeight="1"
+        android:layout_column="1"
+        android:layout_gravity="bottom"
+        android:textColor="#717171"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:text="Maxolex Togolais" />
+
+    <TextView
+        android:id="@+id/txtSubtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_rowWeight="1"
+        android:layout_column="1"
+        android:layout_gravity="fill"
+        android:ellipsize="middle"
+        android:textSize="16sp"
+        tools:text="200 learning hours, Togo." />
+</GridLayout>
