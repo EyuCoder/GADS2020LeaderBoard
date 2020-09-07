@@ -8,21 +8,21 @@ import androidx.lifecycle.ViewModel;
 
 import com.codexo.gads2020leaderboard.data.DataResponseCallback;
 import com.codexo.gads2020leaderboard.data.DataService;
-import com.codexo.gads2020leaderboard.model.LearningLeader;
+import com.codexo.gads2020leaderboard.model.SkillLeader;
 
 import java.util.List;
 
-public class LearningLeadersViewModel extends ViewModel {
-    private Handler handler = new Handler();
-    private MutableLiveData<List<LearningLeader>> learningLeaders;
+public class SLeadersViewModel extends ViewModel {
+    private MutableLiveData<List<SkillLeader>> skillLeaders;
     private MutableLiveData<Boolean> error = new MutableLiveData<>(false);
+    private Handler handler = new Handler();
 
-    public LiveData<List<LearningLeader>> getLearningLeaders() {
-        if (learningLeaders == null) {
-            learningLeaders = new MutableLiveData<>();
+    public LiveData<List<SkillLeader>> getSkillLeaders() {
+        if (skillLeaders == null) {
+            skillLeaders = new MutableLiveData<>();
             refreshList();
         }
-        return learningLeaders;
+        return skillLeaders;
     }
 
     public LiveData<Boolean> getError() {
@@ -33,10 +33,10 @@ public class LearningLeadersViewModel extends ViewModel {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                DataService.getLearningLeaders(new DataResponseCallback<List<LearningLeader>>() {
+                DataService.getSkillLeaders(new DataResponseCallback<List<SkillLeader>>() {
                     @Override
-                    public void onResponse(List<LearningLeader> response) {
-                        learningLeaders.setValue(response);
+                    public void onResponse(List<SkillLeader> response) {
+                        skillLeaders.setValue(response);
                         error.setValue(false);
                     }
 

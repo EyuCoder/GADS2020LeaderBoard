@@ -18,33 +18,33 @@ import android.widget.Toast;
 import com.codexo.gads2020leaderboard.R;
 import com.codexo.gads2020leaderboard.adapter.SkillLeadersRvAdapter;
 import com.codexo.gads2020leaderboard.model.SkillLeader;
-import com.codexo.gads2020leaderboard.viewmodel.SkillLeadersViewModel;
+import com.codexo.gads2020leaderboard.viewmodel.SLeadersViewModel;
 
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link SkillLeadersFragment#newInstance} factory method to
+ * Use the {@link SLeadersFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class SkillLeadersFragment extends Fragment {
+public class SLeadersFragment extends Fragment {
 
-    private SkillLeadersViewModel viewModel;
+    private SLeadersViewModel viewModel;
     private DialogFragment errorDialogFragment;
 
-    public SkillLeadersFragment() {
+    public SLeadersFragment() {
         // Required empty public constructor
     }
 
-    public static SkillLeadersFragment newInstance() {
-        SkillLeadersFragment fragment = new SkillLeadersFragment();
+    public static SLeadersFragment newInstance() {
+        SLeadersFragment fragment = new SLeadersFragment();
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewModel = new ViewModelProvider(this).get(SkillLeadersViewModel.class);
+        viewModel = new ViewModelProvider(this).get(SLeadersViewModel.class);
         errorDialogFragment = OkDialogFragment.newInstance(getString(R.string.network_error));
     }
 

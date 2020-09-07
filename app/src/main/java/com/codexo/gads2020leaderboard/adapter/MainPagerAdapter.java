@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.codexo.gads2020leaderboard.fragment.LearningLeadersFragment;
-import com.codexo.gads2020leaderboard.fragment.SkillLeadersFragment;
+import com.codexo.gads2020leaderboard.fragment.LleadersFragment;
+import com.codexo.gads2020leaderboard.fragment.SLeadersFragment;
 
 public class MainPagerAdapter extends FragmentStateAdapter {
 
@@ -20,10 +20,10 @@ public class MainPagerAdapter extends FragmentStateAdapter {
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = LearningLeadersFragment.newInstance();
+                fragment = LleadersFragment.newInstance();
                 break;
             case 1:
-                fragment = SkillLeadersFragment.newInstance();
+                fragment = SLeadersFragment.newInstance();
                 break;
         }
         return fragment;

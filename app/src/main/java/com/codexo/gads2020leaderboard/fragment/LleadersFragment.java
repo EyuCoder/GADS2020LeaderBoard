@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,33 +18,33 @@ import android.widget.Toast;
 import com.codexo.gads2020leaderboard.R;
 import com.codexo.gads2020leaderboard.adapter.LearningLeadersRvAdapter;
 import com.codexo.gads2020leaderboard.model.LearningLeader;
-import com.codexo.gads2020leaderboard.viewmodel.LearningLeadersViewModel;
+import com.codexo.gads2020leaderboard.viewmodel.LleadersViewModel;
 
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link LearningLeadersFragment#newInstance} factory method to
+ * Use the {@link LleadersFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class LearningLeadersFragment extends Fragment {
+public class LleadersFragment extends Fragment {
 
-    private LearningLeadersViewModel viewModel;
+    private LleadersViewModel viewModel;
     private DialogFragment errorDialogFragment;
 
-    public LearningLeadersFragment() {
+    public LleadersFragment() {
         // Required empty public constructor
     }
 
-    public static LearningLeadersFragment newInstance() {
-        LearningLeadersFragment fragment = new LearningLeadersFragment();
+    public static LleadersFragment newInstance() {
+        LleadersFragment fragment = new LleadersFragment();
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewModel = new ViewModelProvider(this).get(LearningLeadersViewModel.class);
+        viewModel = new ViewModelProvider(this).get(LleadersViewModel.class);
         errorDialogFragment = OkDialogFragment.newInstance(getString(R.string.network_error));
     }
 
